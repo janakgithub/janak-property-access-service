@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: janak-property-access-service
+  profiles:
+    active: dev
+
+  config:
+    import:
+      optional:configserver:http://localhost:8888
+
+server:
+  port: ${port:8100}
